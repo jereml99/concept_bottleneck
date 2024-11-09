@@ -415,6 +415,16 @@ class CUB_extnded_dataset(CUB_dataset):
                 concept_coordinate.append([])
         return concept_coordinate
     
+    def get_by_image_id(self,id):
+        """
+        Get the image by the image id from data/CUB_200_2011/images.txt
+        """
+        try:
+            idx = self.data_id.index(id)
+            return self.__getitem__(idx)
+        except ValueError:
+            raise ValueError("Image id not found in this dataset")
+    
     def __getitem__(self, idx):
 
         # Get the image path from the image dataset
