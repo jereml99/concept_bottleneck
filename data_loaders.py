@@ -349,7 +349,7 @@ class CUB_extnded_dataset(CUB_dataset):
         self.part_names_single = ['back', 'beak', 'belly', 'breast', 'crown', 'forehead', 'eye', 'leg', 'wing', 'nape', 'tail', 'throat'] #List of all path without left and right
 
         #Load concept labels names
-        self.consept_labels_names = pd.read_csv(os.path.join(config_dict['CUB_dir'],"atributes.txt"), sep=" ", header=None)[1].values
+        self.consept_labels_names = pd.read_csv(os.path.join(config_dict['CUB_dir'],"attributes.txt"), sep=" ", header=None)[1].values
 
         #Load class labels names
         self.class_labels_names = pd.read_csv(os.path.join(config_dict['CUB_dir'],"classes.txt"), sep=" ", header=None)[1].values
